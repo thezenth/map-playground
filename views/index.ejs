@@ -2,10 +2,30 @@
 <html>
   <head>
     <title><%= title %></title>
+    <%- include partials/leaflet-head.ejs %>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <style>
+      #mapid { height: 480px; }
+    </style>
+
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div id="mapid"></div>
+
+    <script>
+      var map = L.map('mapid').setView([51.505, -0.09], 13);
+
+      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      L.marker([51.5, -0.09]).addTo(map)
+        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+        .openPopup();
+    </script>
+
   </body>
 </html>
