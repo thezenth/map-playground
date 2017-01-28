@@ -12,7 +12,7 @@
       // Map views always need a projection.  Here we just want to map image
       // coordinates directly to map coordinates, so we create a projection that uses
       // the image extent in pixels.
-      var extent = [0, 0, 1024, 968];
+      var extent = [0, 0, 2500, 1613];
       var projection = new ol.proj.Projection({
         code: 'xkcd-image',
         units: 'pixels',
@@ -24,7 +24,7 @@
           new ol.layer.Image({
             source: new ol.source.ImageStatic({
               attributions: '© <a href="http://xkcd.com/license.html">xkcd</a>',
-              url: '/images/online_communities.png',
+              url: '/images/pari-image.png',
               projection: projection,
               imageExtent: extent
             })
