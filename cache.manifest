@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# version 2.1
+CACHE:
+/stylesheets/ol.css
+/javascripts/ol.js
+/images/online_communities.png
+/images/pari-image.png
+NETWORK:
+*
